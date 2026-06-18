@@ -1,0 +1,410 @@
+[
+  {
+    "sys_id": "02d25ee9476147509127d44a516d43c9",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Read/Write",
+    "value": "read_write",
+    "element": "u_access_level"
+  },
+  {
+    "sys_id": "03c292e9476147509127d44a516d4370",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "DNS Change",
+    "value": "dns_change",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "07e2522d476147509127d44a516d4394",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Pending",
+    "value": "pending",
+    "element": "u_approval_state"
+  },
+  {
+    "sys_id": "105ba799472dc3509127d44a516d43e1",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Read/Write",
+    "value": "read_write",
+    "element": "u_access_level"
+  },
+  {
+    "sys_id": "11e2122d476147509127d44a516d437b",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Other",
+    "value": "other",
+    "element": "u_device"
+  },
+  {
+    "sys_id": "186b6b99472dc3509127d44a516d434b",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Access Point",
+    "value": "access_point",
+    "element": "u_device"
+  },
+  {
+    "sys_id": "18d21ee9476147509127d44a516d4333",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Load Balancer Change",
+    "value": "load_balancer",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "1ce2dee9476147509127d44a516d43a5",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Server",
+    "value": "server",
+    "element": "u_device"
+  },
+  {
+    "sys_id": "1fe2522d476147509127d44a516d43c2",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Approved",
+    "value": "approved",
+    "element": "u_approval_state"
+  },
+  {
+    "sys_id": "20e2dee9476147509127d44a516d43d4",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Load Balancer",
+    "value": "load_balancer",
+    "element": "u_device"
+  },
+  {
+    "sys_id": "23c2dae9476147509127d44a516d43f0",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "VLAN Configuration",
+    "value": "vlan_config",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "264b6799472dc3509127d44a516d43a1",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "DNS Change",
+    "value": "dns_change",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "26d25ee9476147509127d44a516d43f7",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Admin",
+    "value": "admin",
+    "element": "u_access_level"
+  },
+  {
+    "sys_id": "2d5be799472dc3509127d44a516d43b6",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Critical",
+    "value": "critical",
+    "element": "u_urgency"
+  },
+  {
+    "sys_id": "39d25ee9476147509127d44a516d439a",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Read Only",
+    "value": "read_only",
+    "element": "u_access_level"
+  },
+  {
+    "sys_id": "477292e9476147509127d44a516d430f",
+    "inactive": "false",
+    "name": "33dbca6d472147509127d44a516d4371",
+    "label": "Mobiles",
+    "value": "mobiles",
+    "element": "u_device_type"
+  },
+  {
+    "sys_id": "486b2759472dc3509127d44a516d43f3",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Load Balancer",
+    "value": "load_balancer",
+    "element": "u_device"
+  },
+  {
+    "sys_id": "4de2dee9476147509127d44a516d43f5",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Access Point",
+    "value": "access_point",
+    "element": "u_device"
+  },
+  {
+    "sys_id": "4f5b2b99472dc3509127d44a516d4395",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Router",
+    "value": "router",
+    "element": "u_device"
+  },
+  {
+    "sys_id": "56e2522d476147509127d44a516d432b",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Moderate",
+    "value": "moderate",
+    "element": "u_urgency"
+  },
+  {
+    "sys_id": "575b2b99472dc3509127d44a516d43dd",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Switch",
+    "value": "switch",
+    "element": "u_device"
+  },
+  {
+    "sys_id": "5b4b6799472dc3509127d44a516d43fe",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "VPN Tunnel",
+    "value": "vpn_tunnel",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "63d2dee9476147509127d44a516d430b",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Router",
+    "value": "router",
+    "element": "u_device"
+  },
+  {
+    "sys_id": "745be799472dc3509127d44a516d437f",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Admin",
+    "value": "admin",
+    "element": "u_access_level"
+  },
+  {
+    "sys_id": "767252e9476147509127d44a516d43a4",
+    "inactive": "false",
+    "name": "33dbca6d472147509127d44a516d4371",
+    "label": "Laptop",
+    "value": "laptop",
+    "element": "u_device_type"
+  },
+  {
+    "sys_id": "786b6b99472dc3509127d44a516d4354",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Server",
+    "value": "server",
+    "element": "u_device"
+  },
+  {
+    "sys_id": "80d21ee9476147509127d44a516d431e",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Routing Change",
+    "value": "routing_change",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "855be799472dc3509127d44a516d4388",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Deny",
+    "value": "deny",
+    "element": "u_access_level"
+  },
+  {
+    "sys_id": "856b6b99472dc3509127d44a516d438f",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Other",
+    "value": "other",
+    "element": "u_device"
+  },
+  {
+    "sys_id": "85d21ee9476147509127d44a516d43f3",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "VPN Tunnel",
+    "value": "vpn_tunnel",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "8ee2122d476147509127d44a516d43be",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "High",
+    "value": "high",
+    "element": "u_urgency"
+  },
+  {
+    "sys_id": "8f4b6799472dc3509127d44a516d43aa",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Load Balancer Change",
+    "value": "load_balancer",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "91d25ee9476147509127d44a516d4385",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Other",
+    "value": "other",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "9fc2dae9476147509127d44a516d43a8",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Firewall Rule Change",
+    "value": "firewall_rule",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "a5e2122d476147509127d44a516d4390",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Critical",
+    "value": "critical",
+    "element": "u_urgency"
+  },
+  {
+    "sys_id": "b15b2b99472dc3509127d44a516d4317",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "High",
+    "value": "high",
+    "element": "u_urgency"
+  },
+  {
+    "sys_id": "b75b2b99472dc3509127d44a516d43e6",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Firewall",
+    "value": "firewall",
+    "element": "u_device"
+  },
+  {
+    "sys_id": "b7d2dee9476147509127d44a516d4390",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Switch",
+    "value": "switch",
+    "element": "u_device"
+  },
+  {
+    "sys_id": "b94b6799472dc3509127d44a516d432b",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Access Port Configuration",
+    "value": "access_port",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "bad29ee9476147509127d44a516d430c",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Deny",
+    "value": "deny",
+    "element": "u_access_level"
+  },
+  {
+    "sys_id": "bb4ba799472dc3509127d44a516d4307",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Other",
+    "value": "other",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "c14b2799472dc3509127d44a516d4398",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Firewall Rule Change",
+    "value": "firewall_rule",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "cbd29ee9476147509127d44a516d43c3",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Firewall",
+    "value": "firewall",
+    "element": "u_device"
+  },
+  {
+    "sys_id": "d25b2b99472dc3509127d44a516d4320",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Moderate",
+    "value": "moderate",
+    "element": "u_urgency"
+  },
+  {
+    "sys_id": "da4b6799472dc3509127d44a516d4334",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Routing Change",
+    "value": "routing_change",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "df7292e9476147509127d44a516d4316",
+    "inactive": "false",
+    "name": "33dbca6d472147509127d44a516d4371",
+    "label": "Others",
+    "value": "others",
+    "element": "u_device_type"
+  },
+  {
+    "sys_id": "e14bafd947e9c3509127d44a516d432a",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "VLAN Configuration",
+    "value": "vlan_config",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "ea5b2b99472dc3509127d44a516d4335",
+    "inactive": "false",
+    "name": "u_network_request",
+    "label": "Low",
+    "value": "low",
+    "element": "u_urgency"
+  },
+  {
+    "sys_id": "eae2522d476147509127d44a516d4340",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Low",
+    "value": "low",
+    "element": "u_urgency"
+  },
+  {
+    "sys_id": "ecd21ee9476147509127d44a516d439f",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Access Port Configuration",
+    "value": "access_port",
+    "element": "u_request_type"
+  },
+  {
+    "sys_id": "f7e2522d476147509127d44a516d43fd",
+    "inactive": "false",
+    "name": "u_network_database",
+    "label": "Rejected",
+    "value": "rejected",
+    "element": "u_approval_state"
+  }
+]

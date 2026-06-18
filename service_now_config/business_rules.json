@@ -1,0 +1,38 @@
+[
+  {
+    "sys_id": "6a2ce31d472dc3509127d44a516d4353",
+    "condition": "state=3",
+    "name": "Network Task - Complete Request",
+    "active": "true",
+    "collection": "u_network_task",
+    "when": "after",
+    "script": "(function executeRule(current, previous) {\n    if (current.state == '3' && previous.state != '3') {\n        var req = new GlideRecord('u_network_request');\n        if (req.get(current.u_network_request)) {\n            var total = 0, closed = 0;\n            var gr = new GlideRecord('u_network_task');\n            gr.addQuery('u_network_request', current.u_network_request);\n            gr.query();\n            while (gr.next()) { total++; if (gr.state == '3') closed++; }\n            if (total > 0 && total == closed) { req.u_approval_state = 'completed'; req.update(); }\n        }\n    }\n})(current);"
+  },
+  {
+    "sys_id": "9a2ce31d472dc3509127d44a516d4321",
+    "condition": "u_approval_state=approved",
+    "name": "Network Request - Create Fulfillment Tas",
+    "active": "true",
+    "collection": "u_network_request",
+    "when": "after",
+    "script": "(function executeRule(current, previous) {\n    if (current.u_approval_state == 'approved' && previous.u_approval_state != 'approved') {\n        var task = new GlideRecord('u_network_task');\n        task.initialize();\n        task.u_network_request = current.sys_id;\n        task.u_task_type = 'Network Fulfillment';\n        task.short_description = 'Fulfill: ' + current.u_request_type;\n        task.description = current.u_description;\n        task.assignment_group = current.u_network_group;\n        task.priority = current.u_urgency;\n        task.insert();\n    }\n})(current);"
+  },
+  {
+    "sys_id": "dd2ca31d472dc3509127d44a516d4355",
+    "condition": "",
+    "name": "Network Request - Auto Populate Requeste",
+    "active": "true",
+    "collection": "u_network_request",
+    "when": "before",
+    "script": "(function executeRule(current, previous) { if (!current.u_requested_for) { var u = gs.getUser(); current.u_requested_for = u.getID(); current.u_requested_for_email = u.getEmail(); current.u_requested_for_username = u.getUserName(); current.u_requested_for_phone = u.getPhone(); } })(current);"
+  },
+  {
+    "sys_id": "f92ca31d472dc3509127d44a516d43bd",
+    "condition": "",
+    "name": "Network Request - Set Initial State",
+    "active": "true",
+    "collection": "u_network_request",
+    "when": "before",
+    "script": "(function executeRule(current, previous) { current.u_approval_state = \"pending\"; current.u_requested_for = gs.getUserID(); current.u_requested_for_email = gs.getUser().getEmail(); current.u_requested_for_username = gs.getUser().getUserName(); current.u_requested_for_phone = gs.getUser().getPhone(); })(current);"
+  }
+]

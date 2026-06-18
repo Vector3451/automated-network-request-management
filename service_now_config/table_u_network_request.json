@@ -1,0 +1,170 @@
+[
+  {
+    "reference": {
+      "link": "https://dev402064.service-now.com/api/now/table/sys_db_object?name=sys_user",
+      "value": "sys_user"
+    },
+    "mandatory": "false",
+    "element": "u_requested_for",
+    "max_length": "32"
+  },
+  {
+    "reference": {
+      "link": "https://dev402064.service-now.com/api/now/table/sys_db_object?name=cmn_location",
+      "value": "cmn_location"
+    },
+    "mandatory": "false",
+    "element": "u_location",
+    "max_length": "32"
+  },
+  {
+    "reference": {
+      "link": "https://dev402064.service-now.com/api/now/table/sys_db_object?name=sys_user_group",
+      "value": "sys_user_group"
+    },
+    "mandatory": "false",
+    "element": "u_network_group",
+    "max_length": "32"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "sys_id",
+    "max_length": "32"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_requested_for_email",
+    "max_length": "100"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "sys_created_by",
+    "max_length": "40"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_business_justification",
+    "max_length": "4000"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_approval_notes",
+    "max_length": "4000"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_requested_for_phone",
+    "max_length": "40"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "sys_created_on",
+    "max_length": "40"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_access_level",
+    "max_length": "100"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_device_other",
+    "max_length": "500"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_portal_details",
+    "max_length": "1000"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_department",
+    "max_length": "100"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_request_type",
+    "max_length": "100"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_device",
+    "max_length": "255"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_description",
+    "max_length": "4000"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "sys_updated_by",
+    "max_length": "40"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_urgency",
+    "max_length": "40"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_requested_for_username",
+    "max_length": "100"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "sys_mod_count",
+    "max_length": "40"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_short_description",
+    "max_length": "255"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_approval_state",
+    "max_length": "40"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "sys_updated_on",
+    "max_length": "40"
+  },
+  {
+    "reference": {
+      "link": "https://dev402064.service-now.com/api/now/table/sys_db_object?name=sys_user",
+      "value": "sys_user"
+    },
+    "mandatory": "false",
+    "element": "u_approver",
+    "max_length": "32"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_request_number",
+    "max_length": "40"
+  }
+]

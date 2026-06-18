@@ -1,0 +1,20 @@
+[
+  {
+    "sys_id": "982c2bd9472dc3509127d44a516d43d5",
+    "short_description": "Show device_other when device=other",
+    "catalog_item": {
+      "link": "https://dev402064.service-now.com/api/now/table/sc_cat_item/78cb2f99472dc3509127d44a516d4394",
+      "value": "78cb2f99472dc3509127d44a516d4394"
+    },
+    "active": "true"
+  },
+  {
+    "sys_id": "e7ec06ed472147509127d44a516d4322",
+    "short_description": "Show Other Specify when device type is Others",
+    "catalog_item": {
+      "link": "https://dev402064.service-now.com/api/now/table/sc_cat_item/78cb2f99472dc3509127d44a516d4394",
+      "value": "78cb2f99472dc3509127d44a516d4394"
+    },
+    "active": "true"
+  }
+]

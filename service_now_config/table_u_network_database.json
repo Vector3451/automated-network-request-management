@@ -1,0 +1,68 @@
+[
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_customer_address",
+    "max_length": "500"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_device_details",
+    "max_length": "1000"
+  },
+  {
+    "reference": {
+      "link": "https://dev402064.service-now.com/api/now/table/sys_db_object?name=sys_user",
+      "value": "sys_user"
+    },
+    "mandatory": "false",
+    "element": "u_assigned_to",
+    "max_length": "32"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_date_of_enquiry",
+    "max_length": "40"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_customer_document",
+    "max_length": "255"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_approval_state",
+    "max_length": "40"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_requested_for",
+    "max_length": "255"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "sys_id",
+    "max_length": "32"
+  },
+  {
+    "reference": {
+      "link": "https://dev402064.service-now.com/api/now/table/sys_db_object?name=sys_user_group",
+      "value": "sys_user_group"
+    },
+    "mandatory": "false",
+    "element": "u_assignment_group",
+    "max_length": "32"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_request_number",
+    "max_length": "40"
+  }
+]

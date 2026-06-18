@@ -1,0 +1,154 @@
+[
+  {
+    "reference": "",
+    "sys_id": "23eb4e6d472147509127d44a516d43f1",
+    "variable_set": {
+      "link": "https://dev402064.service-now.com/api/now/table/item_option_new_set/a3f4d62147a147509127d44a516d4354",
+      "value": "a3f4d62147a147509127d44a516d4354"
+    },
+    "name": "u_email",
+    "tooltip": "Auto-populated from the selected user",
+    "type": "3",
+    "mandatory": "false",
+    "order": "810"
+  },
+  {
+    "reference": "",
+    "sys_id": "33dbca6d472147509127d44a516d4371",
+    "variable_set": "",
+    "name": "u_device_type",
+    "tooltip": "Select the type of device you are reques",
+    "type": "5",
+    "mandatory": "true",
+    "order": "200"
+  },
+  {
+    "reference": "",
+    "sys_id": "35eb0e6d472147509127d44a516d43b1",
+    "variable_set": "",
+    "name": "u_other_specify",
+    "tooltip": "Provide additional details if your reque",
+    "type": "3",
+    "mandatory": "false",
+    "order": "500"
+  },
+  {
+    "reference": "",
+    "sys_id": "53dbca6d472147509127d44a516d435c",
+    "variable_set": "",
+    "name": "u_new_relocation",
+    "tooltip": "Select whether this is a new network con",
+    "type": "5",
+    "mandatory": "true",
+    "order": "100"
+  },
+  {
+    "reference": "",
+    "sys_id": "542692a9476147509127d44a516d4340",
+    "variable_set": "",
+    "name": "u_short_description",
+    "tooltip": "Provide a brief summary of your network ",
+    "type": "3",
+    "mandatory": "true",
+    "order": "50"
+  },
+  {
+    "reference": "",
+    "sys_id": "5aeb4e6d472147509127d44a516d4304",
+    "variable_set": "",
+    "name": "u_justification",
+    "tooltip": "Explain the business reason for this net",
+    "type": "4",
+    "mandatory": "true",
+    "order": "600"
+  },
+  {
+    "reference": "",
+    "sys_id": "61eb0e6d472147509127d44a516d4345",
+    "variable_set": "",
+    "name": "u_device_details",
+    "tooltip": "Enter specific details about the device ",
+    "type": "3",
+    "mandatory": "false",
+    "order": "400"
+  },
+  {
+    "reference": "",
+    "sys_id": "6aeb4e6d472147509127d44a516d4319",
+    "variable_set": "",
+    "name": "u_description",
+    "tooltip": "Provide a detailed description of the ne",
+    "type": "4",
+    "mandatory": "true",
+    "order": "700"
+  },
+  {
+    "reference": "sys_user",
+    "sys_id": "87eb462d472147509127d44a516d432d",
+    "variable_set": {
+      "link": "https://dev402064.service-now.com/api/now/table/item_option_new_set/a3f4d62147a147509127d44a516d4354",
+      "value": "a3f4d62147a147509127d44a516d4354"
+    },
+    "name": "u_opened_by",
+    "tooltip": "Select the user this request is being su",
+    "type": "7",
+    "mandatory": "true",
+    "order": "800"
+  },
+  {
+    "reference": "",
+    "sys_id": "94ebca6d472147509127d44a516d4392",
+    "variable_set": "",
+    "name": "u_relocation_address",
+    "tooltip": "Enter the new address if this is a reloc",
+    "type": "5",
+    "mandatory": "false",
+    "order": "250"
+  },
+  {
+    "reference": "",
+    "sys_id": "94fb8e6d472147509127d44a516d4340",
+    "variable_set": {
+      "link": "https://dev402064.service-now.com/api/now/table/item_option_new_set/a3f4d62147a147509127d44a516d4354",
+      "value": "a3f4d62147a147509127d44a516d4354"
+    },
+    "name": "u_phone",
+    "tooltip": "Auto-populated from the selected user",
+    "type": "3",
+    "mandatory": "false",
+    "order": "830"
+  },
+  {
+    "reference": "",
+    "sys_id": "b0eb0e6d472147509127d44a516d4330",
+    "variable_set": "",
+    "name": "u_address",
+    "tooltip": "Enter the physical or network address fo",
+    "type": "3",
+    "mandatory": "false",
+    "order": "300"
+  },
+  {
+    "reference": "",
+    "sys_id": "b0fb8e6d472147509127d44a516d43a0",
+    "variable_set": "",
+    "name": "u_proof_document",
+    "tooltip": "Attach any supporting documents for this",
+    "type": "10",
+    "mandatory": "false",
+    "order": "900"
+  },
+  {
+    "reference": "",
+    "sys_id": "b3eb8e6d472147509127d44a516d4306",
+    "variable_set": {
+      "link": "https://dev402064.service-now.com/api/now/table/item_option_new_set/a3f4d62147a147509127d44a516d4354",
+      "value": "a3f4d62147a147509127d44a516d4354"
+    },
+    "name": "u_username",
+    "tooltip": "Auto-populated from the selected user",
+    "type": "3",
+    "mandatory": "false",
+    "order": "820"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "sys_id": "052ce8b9472587509127d44a516d4391",
+    "roles": "itil",
+    "name": "Network Team",
+    "description": "Network fulfillment team",
+    "active": "true"
+  },
+  {
+    "sys_id": "bd2c2cf9472587509127d44a516d434b",
+    "roles": "itil,approval_user",
+    "name": "Network Approvers",
+    "description": "Approvers for network change requests",
+    "active": "true"
+  },
+  {
+    "sys_id": "162c2cf9472587509127d44a516d43af",
+    "roles": "itil",
+    "name": "Network Requesters",
+    "description": "Users who can submit network requests",
+    "active": "true"
+  }
+]

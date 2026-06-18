@@ -1,0 +1,9 @@
+[
+  {
+    "sys_id": "c065d26147a147509127d44a516d43ef",
+    "name": "Auto-populate User Details",
+    "active": "true",
+    "type": "onChange",
+    "script": "function onChange(control, oldValue, newValue, isLoading) {\n    if (isLoading || newValue === '') {\n        g_form.setValue('u_email', '');\n        g_form.setValue('u_username', '');\n        g_form.setValue('u_phone', '');\n        return;\n    }\n    \n    // Use getReference to fetch user details\n    g_form.getReference('u_opened_by', function(user) {\n        g_form.setValue('u_email', user.email);\n        g_form.setValue('u_username', user.user_name);\n        g_form.setValue('u_phone', user.phone);\n    });\n}\n"
+  }
+]

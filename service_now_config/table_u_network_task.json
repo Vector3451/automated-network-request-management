@@ -1,0 +1,50 @@
+[
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_implementation_plan",
+    "max_length": "4000"
+  },
+  {
+    "reference": {
+      "link": "https://dev402064.service-now.com/api/now/table/sys_db_object?name=cmdb_ci",
+      "value": "cmdb_ci"
+    },
+    "mandatory": "false",
+    "element": "u_configuration_item",
+    "max_length": "32"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "sys_id",
+    "max_length": "32"
+  },
+  {
+    "reference": {
+      "link": "https://dev402064.service-now.com/api/now/table/sys_db_object?name=u_network_request",
+      "value": "u_network_request"
+    },
+    "mandatory": "false",
+    "element": "u_network_request",
+    "max_length": "32"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_rollback_plan",
+    "max_length": "4000"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_work_notes",
+    "max_length": "4000"
+  },
+  {
+    "reference": "",
+    "mandatory": "false",
+    "element": "u_task_type",
+    "max_length": "100"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "sys_id": "187c2f1d472dc3509127d44a516d438a",
+    "condition": "u_approval_state=completed",
+    "recipient_fields": "",
+    "subject": "",
+    "name": "Network Request - Completed",
+    "event_name": "network_request.completed",
+    "active": "true",
+    "collection": "u_network_request",
+    "message": "<p>Hello ${u_requested_for},</p>\n<p>Your network request <strong>${number}</strong> has been <strong>completed</strong>.</p>\n<p>All fulfillment tasks have been finished. If you experience any issues, please submit a new request.</p>\n<p>Thank you,<br/>Network Operations Team</p>"
+  },
+  {
+    "sys_id": "326ceb1d472dc3509127d44a516d4387",
+    "condition": "u_approval_state=pending",
+    "recipient_fields": "",
+    "subject": "",
+    "name": "Network Request - Approval Required",
+    "event_name": "network_request.approval_required",
+    "active": "true",
+    "collection": "u_network_request",
+    "message": "<p>Hello,</p>\n<p>A network request requires your approval.</p>\n<p><strong>Request Number:</strong> ${number}<br/>\n<strong>Requested By:</strong> ${u_requested_for}<br/>\n<strong>Request Type:</strong> ${u_request_type}<br/>\n<strong>Urgency:</strong> ${u_urgency}<br/>\n<strong>Business Justification:</strong> ${u_business_justification}</p>\n<p>Please review and approve or reject this request.</p>"
+  },
+  {
+    "sys_id": "876ceb1d472dc3509127d44a516d439c",
+    "condition": "u_approval_state=approved",
+    "recipient_fields": "",
+    "subject": "",
+    "name": "Network Request - Approved",
+    "event_name": "network_request.approved",
+    "active": "true",
+    "collection": "u_network_request",
+    "message": "<p>Hello ${u_requested_for},</p>\n<p>Your network request <strong>${number}</strong> has been <strong>approved</strong>.</p>\n<p>The network team has been notified and will begin fulfillment shortly.</p>\n<p>You will receive updates as the task progresses.</p>\n<p>Thank you,<br/>Network Operations Team</p>"
+  },
+  {
+    "sys_id": "b76c2f1d472dc3509127d44a516d4343",
+    "condition": "",
+    "recipient_fields": "",
+    "subject": "",
+    "name": "Network Task - Assigned",
+    "event_name": "network_task.assigned",
+    "active": "true",
+    "collection": "u_network_task",
+    "message": "<p>Hello,</p>\n<p>A new network task has been assigned to your team.</p>\n<p><strong>Task:</strong> ${number}<br/>\n<strong>Request:</strong> ${u_network_request}<br/>\n<strong>Task Type:</strong> ${u_task_type}<br/>\n<strong>Priority:</strong> ${priority}</p>\n<p>Please review and begin work on this task.</p>"
+  },
+  {
+    "sys_id": "d66ceb1d472dc3509127d44a516d4347",
+    "condition": "u_approval_state=pending",
+    "recipient_fields": "",
+    "subject": "",
+    "name": "Network Request - Submitted",
+    "event_name": "network_request.submitted",
+    "active": "true",
+    "collection": "u_network_request",
+    "message": "<p>Hello ${u_requested_for},</p>\n<p>Your network request <strong>${number}</strong> has been submitted successfully.</p>\n<p><strong>Request Type:</strong> ${u_request_type}<br/>\n<strong>Urgency:</strong> ${u_urgency}<br/>\n<strong>Status:</strong> Awaiting Approval</p>\n<p>You will be notified when your request is reviewed.</p>\n<p>Thank you,<br/>Network Operations Team</p>"
+  },
+  {
+    "sys_id": "e76c2f1d472dc3509127d44a516d433a",
+    "condition": "u_approval_state=rejected",
+    "recipient_fields": "",
+    "subject": "",
+    "name": "Network Request - Rejected",
+    "event_name": "network_request.rejected",
+    "active": "true",
+    "collection": "u_network_request",
+    "message": "<p>Hello ${u_requested_for},</p>\n<p>Your network request <strong>${number}</strong> has been <strong>rejected</strong>.</p>\n<p><strong>Reason:</strong> ${u_approval_notes}</p>\n<p>If you have questions, please contact the network team.</p>"
+  }
+]
