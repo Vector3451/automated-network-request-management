@@ -139,9 +139,9 @@ Streamline and automate the end-to-end lifecycle of network-related service requ
 | Variable | Type | Mandatory | Order |
 |----------|------|-----------|-------|
 | u_short_description | String | Yes | 50 |
-| u_new_relocation | Select Box | Yes | 100 |
-| u_device_type | Select Box | Yes | 200 |
-| u_relocation_address | Select Box | No | 250 |
+|| u_new_relocation | String | Yes | 100 |
+| u_device_type | String | Yes | 200 |
+| u_relocation_address | String | No | 250 |
 | u_address | String | No | 300 |
 | u_device_details | String | No | 400 |
 | u_other_specify | String | No | 500 |
@@ -237,8 +237,9 @@ Streamline and automate the end-to-end lifecycle of network-related service requ
 ## 10. Known Issues
 
 - ACLs cannot be created via REST API (ServiceNow security constraint). Default ACLs are active.
-- Service Portal Dashboard widget needs manual creation in Service Portal Designer.
+- Service Portal Dashboard widget needs manual creation in ServicePortal Designer.
 - Flow Designer flow for approval routing needs UI configuration (Business Rules handle the logic as alternative).
+- **Select Box dropdowns**: The three dropdown variables (u_new_relocation, u_device_type, u_relocation_address) were changed from Select Box (type 5) to String (type 3) because the Service Portal's Select Box rendering requires specific choice_table configuration that couldn't be set via REST API. To restore dropdowns: edit each variable in the ServiceNow UI, change type back to "Select Box", and add choices manually.
 
 ---
 
