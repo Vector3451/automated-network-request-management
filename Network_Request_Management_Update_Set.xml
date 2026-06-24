@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-06-24">
+  <sys_update_set name="Automated Network Request Management" description="Automated Network Request Management System - Catalog Item, Variables, Tables, Business Rules, UI Policies, Client Scripts, Email Notifications, and Choice Lists" application="global">
+    <sys_update_version name="1.0.0" source="dev402064" version="1.0.0" />
+  </sys_update_set>
+
+  <!-- ==================== CUSTOM TABLES ==================== -->
+  <sys_db_object name="u_network_request" table="u_network_request" action="INSERT_OR_UPDATE">
+    <name>u_network_request</name>
+    <label>Network Request</label>
+    <access>public</access>
+    <is_extendable>false</is_extendable>
+    <live_feed_enabled>false</live_feed_enabled>
+  </sys_db_object>
+
+  <sys_db_object name="u_network_task" table="u_network_task" action="INSERT_OR_UPDATE">
+    <name>u_network_task</name>
+    <label>Network Task</label>
+    <access>public</access>
+    <is_extendable>false</is_extendable>
+    <super_class>task</super_class>
+    <live_feed_enabled>false</live_feed_enabled>
+  </sys_db_object>
+
+  <sys_db_object name="u_network_database" table="u_network_database" action="INSERT_OR_UPDATE">
+    <name>u_network_database</name>
+    <label>Network Database</label>
+    <access>public</access>
+    <is_extendable>false</is_extendable>
+    <live_feed_enabled>false</live_feed_enabled>
+  </sys_db_object>
+
+  <!-- ==================== TABLE FIELDS (u_network_request) ==================== -->
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_request_type" table="u_network_request">
+    <column_label>Request Type</column_label>
+    <internal_type>string</internal_type>
+    <max_length>100</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_access_level" table="u_network_request">
+    <column_label>Access Level</column_label>
+    <internal_type>string</internal_type>
+    <max_length>100</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_device" table="u_network_request">
+    <column_label>Device</column_label>
+    <internal_type>string</internal_type>
+    <max_length>100</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_device_other" table="u_network_request">
+    <column_label>Device (Other)</column_label>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_business_justification" table="u_network_request">
+    <column_label>Business Justification</column_label>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_urgency" table="u_network_request">
+    <column_label>Urgency</column_label>
+    <internal_type>string</internal_type>
+    <max_length>100</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_portal_details" table="u_network_request">
+    <column_label>Portal Details</column_label>
+    <internal_type>string</internal_type>
+    <max_length>1000</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_requested_for" table="u_network_request">
+    <column_label>Requested For</column_label>
+    <internal_type>reference</internal_type>
+    <reference>sys_user</reference>
+    <max_length>32</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_requested_for_email" table="u_network_request">
+    <column_label>Requester Email</column_label>
+    <internal_type>string</internal_type>
+    <max_length>100</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_requested_for_phone" table="u_network_request">
+    <column_label>Requester Phone</column_label>
+    <internal_type>string</internal_type>
+    <max_length>50</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_requested_for_username" table="u_network_request">
+    <column_label>Requester Username</column_label>
+    <internal_type>string</internal_type>
+    <max_length>100</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_approval_state" table="u_network_request">
+    <column_label>Approval State</column_label>
+    <internal_type>string</internal_type>
+    <max_length>100</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_approver" table="u_network_request">
+    <column_label>Approver</column_label>
+    <internal_type>reference</internal_type>
+    <reference>sys_user</reference>
+    <max_length>32</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_approval_notes" table="u_network_request">
+    <column_label>Approval Notes</column_label>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_network_group" table="u_network_request">
+    <column_label>Network Group</column_label>
+    <internal_type>reference</internal_type>
+    <reference>sys_user_group</reference>
+    <max_length>32</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_department" table="u_network_request">
+    <column_label>Department</column_label>
+    <internal_type>string</internal_type>
+    <max_length>100</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_location" table="u_network_request">
+    <column_label>Location</column_label>
+    <internal_type>reference</internal_type>
+    <reference>cmn_location</reference>
+    <max_length>32</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_short_description" table="u_network_request">
+    <column_label>Short Description</column_label>
+    <internal_type>string</internal_type>
+    <max_length>255</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_description" table="u_network_request">
+    <column_label>Description</column_label>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_request" element="u_request_number" table="u_network_request">
+    <column_label>Request Number</column_label>
+    <internal_type>string</internal_type>
+    <max_length>50</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+
+  <!-- ==================== TABLE FIELDS (u_network_task) ==================== -->
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_task" element="u_network_request" table="u_network_task">
+    <column_label>Network Request</column_label>
+    <internal_type>reference</internal_type>
+    <reference>u_network_request</reference>
+    <max_length>32</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_task" element="u_task_type" table="u_network_task">
+    <column_label>Task Type</column_label>
+    <internal_type>string</internal_type>
+    <max_length>100</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_task" element="u_configuration_item" table="u_network_task">
+    <column_label>Configuration Item</column_label>
+    <internal_type>reference</internal_type>
+    <reference>cmdb_ci</reference>
+    <max_length>32</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_task" element="u_work_notes" table="u_network_task">
+    <column_label>Work Notes</column_label>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_task" element="u_implementation_plan" table="u_network_task">
+    <column_label>Implementation Plan</column_label>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_task" element="u_rollback_plan" table="u_network_task">
+    <column_label>Rollback Plan</column_label>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+
+  <!-- ==================== TABLE FIELDS (u_network_database) ==================== -->
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_database" element="u_assignment_group" table="u_network_database">
+    <column_label>Assignment Group</column_label>
+    <internal_type>reference</internal_type>
+    <reference>sys_user_group</reference>
+    <max_length>32</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_database" element="u_assigned_to" table="u_network_database">
+    <column_label>Assigned To</column_label>
+    <internal_type>reference</internal_type>
+    <reference>sys_user</reference>
+    <max_length>32</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_database" element="u_request_number" table="u_network_database">
+    <column_label>Request Number</column_label>
+    <internal_type>string</internal_type>
+    <max_length>50</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_database" element="u_customer_document" table="u_network_database">
+    <column_label>Customer Document</column_label>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_database" element="u_device_details" table="u_network_database">
+    <column_label>Device Details</column_label>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_database" element="u_date_of_enquiry" table="u_network_database">
+    <column_label>Date of Enquiry</column_label>
+    <internal_type>date</internal_type>
+    <max_length>10</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_database" element="u_customer_address" table="u_network_database">
+    <column_label>Customer Address</column_label>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_database" element="u_approval_state" table="u_network_database">
+    <column_label>Approval State</column_label>
+    <internal_type>string</internal_type>
+    <max_length>100</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+  <sys_dictionary action="INSERT_OR_UPDATE" name="u_network_database" element="u_requested_for" table="u_network_database">
+    <column_label>Requested For</column_label>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+
+  <!-- ==================== CATALOG ITEM ==================== -->
+  <sc_cat_item action="INSERT_OR_UPDATE" sys_id="78cb2f99472dc3509127d44a516d4394">
+    <name>Network Request</name>
+    <short_description>Submit a network change or access request</short_description>
+    <description>Use this catalog item to request network changes including firewall rules, VLAN configurations, access port changes, routing changes, DNS modifications, and VPN tunnel setups. All requests require approval before fulfillment.</description>
+    <category>Network Standard Changes</category>
+    <catalog>Service Catalog</catalog>
+    <active>true</active>
+    <use_sc_layout>true</use_sc_layout>
+  </sc_cat_item>
+
+  <!-- ==================== CATALOG VARIABLES ==================== -->
+  <!-- Select Box Variables -->
+  <item_option_new action="INSERT_OR_UPDATE" sys_id="fa0fcda7476907909127d44a516d43a8">
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <name>u_new_relocation</name>
+    <variable_name>u_new_relocation</variable_name>
+    <type>5</type>
+    <question_text>Is this a New connection or Relocation?</question_text>
+    <mandatory>true</mandatory>
+    <order>100</order>
+    <default_value></default_value>
+    <include_none>false</include_none>
+  </item_option_new>
+
+  <item_option_new action="INSERT_OR_UPDATE" sys_id="3e0fcda7476907909127d44a516d43be">
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <name>u_device_type</name>
+    <variable_name>u_device_type</variable_name>
+    <type>5</type>
+    <question_text>Types of devices</question_text>
+    <mandatory>true</mandatory>
+    <order>200</order>
+    <default_value></default_value>
+    <include_none>false</include_none>
+  </item_option_new>
+
+  <item_option_new action="INSERT_OR_UPDATE" sys_id="cb0fcda7476907909127d44a516d43cc">
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <name>u_relocation_address</name>
+    <variable_name>u_relocation_address</variable_name>
+    <type>5</type>
+    <question_text>If this is a relocation, Please provide your relocated address here</question_text>
+    <mandatory>false</mandatory>
+    <order>250</order>
+    <default_value></default_value>
+    <include_none>false</include_none>
+  </item_option_new>
+
+  <!-- String Variables -->
+  <item_option_new action="INSERT_OR_UPDATE" sys_id="542692a9476147509127d44a516d4340">
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <name>u_short_description</name>
+    <variable_name>u_short_description</variable_name>
+    <type>3</type>
+    <question_text>Short Description</question_text>
+    <mandatory>true</mandatory>
+    <order>50</order>
+    <default_value></default_value>
+  </item_option_new>
+
+  <item_option_new action="INSERT_OR_UPDATE" sys_id="b0eb0e6d472147509127d44a516d4330">
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <name>u_address</name>
+    <variable_name>u_address</variable_name>
+    <type>3</type>
+    <question_text>Please provide address here</question_text>
+    <mandatory>false</mandatory>
+    <order>300</order>
+    <default_value></default_value>
+  </item_option_new>
+
+  <item_option_new action="INSERT_OR_UPDATE" sys_id="61eb0e6d472147509127d44a516d4345">
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <name>u_device_details</name>
+    <variable_name>u_device_details</variable_name>
+    <type>3</type>
+    <question_text>Provide device details here</question_text>
+    <mandatory>false</mandatory>
+    <order>400</order>
+    <default_value></default_value>
+  </item_option_new>
+
+  <item_option_new action="INSERT_OR_UPDATE" sys_id="35eb0e6d472147509127d44a516d43b1">
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <name>u_other_specify</name>
+    <variable_name>u_other_specify</variable_name>
+    <type>3</type>
+    <question_text>If anything else, please specify</question_text>
+    <mandatory>false</mandatory>
+    <order>500</order>
+    <default_value></default_value>
+  </item_option_new>
+
+  <item_option_new action="INSERT_OR_UPDATE" sys_id="23eb4e6d472147509127d44a516d43f1">
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <name>u_email</name>
+    <variable_name>u_email</variable_name>
+    <type>3</type>
+    <question_text>Email Id</question_text>
+    <mandatory>false</mandatory>
+    <order>810</order>
+    <default_value></default_value>
+  </item_option_new>
+
+  <item_option_new action="INSERT_OR_UPDATE" sys_id="b3eb8e6d472147509127d44a516d4306">
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <name>u_username</name>
+    <variable_name>u_username</variable_name>
+    <type>3</type>
+    <question_text>User name</question_text>
+    <mandatory>false</mandatory>
+    <order>820</order>
+    <default_value></default_value>
+  </item_option_new>
+
+  <item_option_new action="INSERT_OR_UPDATE" sys_id="94fb8e6d472147509127d44a516d4340">
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <name>u_phone</name>
+    <variable_name>u_phone</variable_name>
+    <type>3</type>
+    <question_text>Phone</question_text>
+    <mandatory>false</mandatory>
+    <order>830</order>
+    <default_value></default_value>
+  </item_option_new>
+
+  <!-- Multi Line Text Variables -->
+  <item_option_new action="INSERT_OR_UPDATE" sys_id="5aeb4e6d472147509127d44a516d4304">
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <name>u_justification</name>
+    <variable_name>u_justification</variable_name>
+    <type>4</type>
+    <question_text>Please provide a business justification for this request</question_text>
+    <mandatory>true</mandatory>
+    <order>600</order>
+    <default_value></default_value>
+  </item_option_new>
+
+  <item_option_new action="INSERT_OR_UPDATE" sys_id="6aeb4e6d472147509127d44a516d4319">
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <name>u_description</name>
+    <variable_name>u_description</variable_name>
+    <type>4</type>
+    <question_text>Detailed description of the request</question_text>
+    <mandatory>true</mandatory>
+    <order>700</order>
+    <default_value></default_value>
+  </item_option_new>
+
+  <!-- Reference Variable -->
+  <item_option_new action="INSERT_OR_UPDATE" sys_id="87eb462d472147509127d44a516d432d">
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <name>u_opened_by</name>
+    <variable_name>u_opened_by</variable_name>
+    <type>7</type>
+    <question_text>Opened on behalf of</question_text>
+    <mandatory>true</mandatory>
+    <order>800</order>
+    <reference>sys_user</reference>
+    <default_value></default_value>
+  </item_option_new>
+
+  <!-- Attachment Variable -->
+  <item_option_new action="INSERT_OR_UPDATE" sys_id="b0fb8e6d472147509127d44a516d43a0">
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <name>u_proof_document</name>
+    <variable_name>u_proof_document</variable_name>
+    <type>10</type>
+    <question_text>Attach any supporting documents for this request</question_text>
+    <mandatory>false</mandatory>
+    <order>900</order>
+    <default_value></default_value>
+  </item_option_new>
+
+  <!-- ==================== CHOICE LISTS ==================== -->
+  <!-- u_new_relocation choices -->
+  <sys_choice action="INSERT_OR_UPDATE" name="fa0fcda7476907909127d44a516d43a8" element="u_new_relocation" value="new" label="New" order="100" inactive="false" />
+  <sys_choice action="INSERT_OR_UPDATE" name="fa0fcda7476907909127d44a516d43a8" element="u_new_relocation" value="relocation" label="Relocation" order="200" inactive="false" />
+  <sys_choice action="INSERT_OR_UPDATE" name="fa0fcda7476907909127d44a516d43a8" element="u_new_relocation" value="none" label="None" order="300" inactive="false" />
+
+  <!-- u_device_type choices -->
+  <sys_choice action="INSERT_OR_UPDATE" name="3e0fcda7476907909127d44a516d43be" element="u_device_type" value="laptop" label="Laptop" order="100" inactive="false" />
+  <sys_choice action="INSERT_OR_UPDATE" name="3e0fcda7476907909127d44a516d43be" element="u_device_type" value="mobiles" label="Mobiles" order="200" inactive="false" />
+  <sys_choice action="INSERT_OR_UPDATE" name="3e0fcda7476907909127d44a516d43be" element="u_device_type" value="others" label="Others" order="300" inactive="false" />
+
+  <!-- u_relocation_address choices -->
+  <sys_choice action="INSERT_OR_UPDATE" name="cb0fcda7476907909127d44a516d43cc" element="u_relocation_address" value="address_option_1" label="Address Option 1" order="100" inactive="false" />
+  <sys_choice action="INSERT_OR_UPDATE" name="cb0fcda7476907909127d44a516d43cc" element="u_relocation_address" value="address_option_2" label="Address Option 2" order="200" inactive="false" />
+
+  <!-- ==================== UI POLICIES ==================== -->
+  <catalog_ui_policy action="INSERT_OR_UPDATE" sys_id="ui_policy_show_other_specify">
+    <catalog_item>78cb2f99472dc3509127d44a516d4394</catalog_item>
+    <short_description>Show Other Specify when device type is Others</short_description>
+    <active>true</active>
+    <reverse>false</reverse>
+    <on_load>true</on_load>
+    <conditions>
+      <condition field="u_device_type" value="others" operator="=" />
+    </conditions>
+  </catalog_ui_policy>
+
+  <catalog_ui_policy_action ui_policy="ui_policy_show_other_specify" action="INSERT_OR_UPDATE">
+    <catalog_item>78cb2f99472dc3509127d44a516d4394</catalog_item>
+    <variable_name>u_other_specify</variable_name>
+    <mandatory>false</mandatory>
+    <visible>true</visible>
+    <order>100</order>
+  </catalog_ui_policy_action>
+
+  <!-- ==================== BUSINESS RULES ==================== -->
+  <sys_script action="INSERT_OR_UPDATE" sys_id="f92ca31d472dc3509127d44a516d43bd">
+    <name>Network Request - Set Initial State</name>
+    <collection>u_network_request</collection>
+    <when>before</when>
+    <active>true</active>
+    <condition></condition>
+    <script><![CDATA[(function executeRule(current, previous) { current.u_approval_state = "pending"; current.u_requested_for = gs.getUserID(); current.u_requested_for_email = gs.getUser().getEmail(); current.u_requested_for_username = gs.getUser().getUserName(); current.u_requested_for_phone = gs.getUser().getPhone(); })(current);]]></script>
+  </sys_script>
+
+  <sys_script action="INSERT_OR_UPDATE" sys_id="dd2ca31d472dc3509127d44a516d4355">
+    <name>Network Request - Auto Populate Requested For</name>
+    <collection>u_network_request</collection>
+    <when>before</when>
+    <active>true</active>
+    <condition></condition>
+    <script><![CDATA[(function executeRule(current, previous) { if (!current.u_requested_for) { var u = gs.getUser(); current.u_requested_for = u.getID(); current.u_requested_for_email = u.getEmail(); current.u_requested_for_username = u.getUserName(); current.u_requested_for_phone = u.getPhone(); } })(current);]]></script>
+  </sys_script>
+
+  <sys_script action="INSERT_OR_UPDATE" sys_id="9a2ce31d472dc3509127d44a516d4321">
+    <name>Network Request - Create Fulfillment Task</name>
+    <collection>u_network_request</collection>
+    <when>after</when>
+    <active>true</active>
+    <condition>u_approval_state=approved</condition>
+    <script><![CDATA[(function executeRule(current, previous) {
+    if (current.u_approval_state == 'approved' && previous.u_approval_state != 'approved') {
+        var task = new GlideRecord('u_network_task');
+        task.initialize();
+        task.u_network_request = current.sys_id;
+        task.u_task_type = 'Network Fulfillment';
+        task.short_description = 'Fulfill: ' + current.u_request_type;
+        task.description = current.u_description;
+        task.assignment_group = current.u_network_group;
+        task.priority = current.u_urgency;
+        task.insert();
+    }
+})(current);]]></script>
+  </sys_script>
+
+  <sys_script action="INSERT_OR_UPDATE" sys_id="6a2ce31d472dc3509127d44a516d4353">
+    <name>Network Task - Complete Request</name>
+    <collection>u_network_task</collection>
+    <when>after</when>
+    <active>true</active>
+    <condition>state=3</condition>
+    <script><![CDATA[(function executeRule(current, previous) {
+    if (current.state == '3' && previous.state != '3') {
+        var req = new GlideRecord('u_network_request');
+        if (req.get(current.u_network_request)) {
+            var total = 0, closed = 0;
+            var gr = new GlideRecord('u_network_task');
+            gr.addQuery('u_network_request', current.u_network_request);
+            gr.query();
+            while (gr.next()) { total++; if (gr.state == '3') closed++; }
+            if (total > 0 && total == closed) { req.u_approval_state = 'completed'; req.update(); }
+        }
+    }
+})(current);]]></script>
+  </sys_script>
+
+  <!-- ==================== CLIENT SCRIPTS ==================== -->
+  <sys_script_client action="INSERT_OR_UPDATE" sys_id="c065d26147a147509127d44a516d43ef">
+    <name>Auto-populate User Details</name>
+    <cat_item>78cb2f99472dc3509127d44a516d4394</cat_item>
+    <type>onChange</type>
+    <variable_name>u_opened_by</variable_name>
+    <active>true</active>
+    <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue === '') {
+        g_form.setValue('u_email', '');
+        g_form.setValue('u_username', '');
+        g_form.setValue('u_phone', '');
+        return;
+    }
+    g_form.getReference('u_opened_by', function(user) {
+        g_form.setValue('u_email', user.email);
+        g_form.setValue('u_username', user.user_name);
+        g_form.setValue('u_phone', user.phone);
+    });
+}]]></script>
+  </sys_script_client>
+
+  <!-- ==================== EMAIL NOTIFICATIONS ==================== -->
+  <sys_email action="INSERT_OR_UPDATE" sys_id="email_request_submitted">
+    <name>Network Request - Submitted</name>
+    <body><![CDATA[Dear ${u_requested_for},
+
+Your network request "${u_short_description}" has been submitted for approval.
+
+Request Type: ${u_request_type}
+Device: ${u_device}
+Urgency: ${u_urgency}
+
+You will be notified once the approval is processed.
+
+Thank you,
+Network Operations Team]]></body>
+    <subject>Network Request Submitted - ${u_request_number}</subject>
+    <from>network@company.com</from>
+    <to>${u_requested_for_email}</to>
+    <condition>current.u_approval_state.changesTo('pending')</condition>
+  </sys_email>
+
+  <sys_email action="INSERT_OR_UPDATE" sys_id="email_request_approved">
+    <name>Network Request - Approved</name>
+    <body><![CDATA[Dear ${u_requested_for},
+
+Your network request "${u_short_description}" has been APPROVED.
+
+Request Type: ${u_request_type}
+Device: ${u_device}
+
+The fulfillment team will begin implementation shortly.
+
+Thank you,
+Network Operations Team]]></body>
+    <subject>Network Request Approved - ${u_request_number}</subject>
+    <from>network@company.com</from>
+    <to>${u_requested_for_email}</to>
+    <condition>current.u_approval_state.changesTo('approved')</condition>
+  </sys_email>
+
+  <sys_email action="INSERT_OR_UPDATE" sys_id="email_request_rejected">
+    <name>Network Request - Rejected</name>
+    <body><![CDATA[Dear ${u_requested_for},
+
+Your network request "${u_short_description}" has been REJECTED.
+
+Reason: ${u_approval_notes}
+
+If you have questions, please contact the approver.
+
+Thank you,
+Network Operations Team]]></body>
+    <subject>Network Request Rejected - ${u_request_number}</subject>
+    <from>network@company.com</from>
+    <to>${u_requested_for_email}</to>
+    <condition>current.u_approval_state.changesTo('rejected')</condition>
+  </sys_email>
+
+  <sys_email action="INSERT_OR_UPDATE" sys_id="email_request_completed">
+    <name>Network Request - Completed</name>
+    <body><![CDATA[Dear ${u_requested_for},
+
+Your network request "${u_short_description}" has been COMPLETED.
+
+All fulfillment tasks have been closed. If you experience any issues, please contact the support team.
+
+Thank you,
+Network Operations Team]]></body>
+    <subject>Network Request Completed - ${u_request_number}</subject>
+    <from>network@company.com</from>
+    <to>${u_requested_for_email}</to>
+    <condition>current.u_approval_state.changesTo('completed')</condition>
+  </sys_email>
+
+  <sys_email action="INSERT_OR_UPDATE" sys_id="email_task_assigned">
+    <name>Network Task - Assigned</name>
+    <body><![CDATA[You have been assigned a fulfillment task:
+
+Request: ${u_network_request.u_short_description}
+Task Type: ${u_task_type}
+Priority: ${u_network_request.u_urgency}
+
+Please review and begin implementation.]]></body>
+    <subject>New Network Task Assigned - ${u_task_type}</subject>
+    <from>network@company.com</from>
+    <to>${u_assigned_to.email}</to>
+    <condition>current.u_assigned_to.changes()</condition>
+  </sys_email>
+
+  <sys_email action="INSERT_OR_UPDATE" sys_id="email_approval_required">
+    <name>Network Request - Approval Required</name>
+    <body><![CDATA[A new network request requires your approval:
+
+Requested by: ${u_requested_for}
+Request Type: ${u_request_type}
+Short Description: ${u_short_description}
+Urgency: ${u_urgency}
+
+Please review and approve/reject the request.]]></body>
+    <subject>Approval Required - Network Request ${u_request_number}</subject>
+    <from>network@company.com</from>
+    <to>${u_approver.email}</to>
+    <condition>current.u_approval_state.changesTo('pending')</condition>
+  </sys_email>
+
+  <!-- ==================== USER GROUPS ==================== -->
+  <sys_user_group action="INSERT_OR_UPDATE" sys_id="grp_network_team">
+    <name>Network Team</name>
+    <description>Network fulfillment team responsible for implementing network changes</description>
+    <active>true</active>
+  </sys_user_group>
+
+  <sys_user_group action="INSERT_OR_UPDATE" sys_id="grp_network_approvers">
+    <name>Network Approvers</description>
+    <description>Managers who approve network requests</description>
+    <active>true</active>
+  </sys_user_group>
+
+  <sys_user_group action="INSERT_OR_UPDATE" sys_id="grp_network_requesters">
+    <name>Network Requesters</description>
+    <description>Users who submit network requests</description>
+    <active>true</active>
+  </sys_user_group>
+
+</unload>
