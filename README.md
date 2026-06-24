@@ -59,6 +59,13 @@ VARIABLES
 
 HOW TO DEPLOY
 --
+Option A — XML Update Set (recommended for other instances):
+1. Navigate to System Update Sets > Retrieved Update Sets
+2. Import the file: Network_Request_Management_Update_Set.xml
+3. Preview and commit the update set
+4. All components will be installed automatically
+
+Option B — Manual (for this dev instance):
 1. Import service_now_config/ JSON files into ServiceNow
 2. Run fix_field_types.js as a Fix Script (System Definition > Fix Scripts)
 3. Navigate to the Service Portal to test the form
