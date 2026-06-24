@@ -69,7 +69,3 @@ BUG NOTES
   field types are not set correctly. Run fix_field_types.js to resolve.
 - The "Required Filled" label appears on some fields due to mandatory + 
   display value configuration. This is cosmetic only.
-
-AUTHOR
-------
-Built by OWL (ZOO company) for HTB CTF
